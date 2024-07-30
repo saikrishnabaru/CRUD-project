@@ -6,8 +6,6 @@ import java.util.Optional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.jpa.repository.Query;
-
 import com.example.demo.entity.Employee;
 import com.example.demo.repo.EmployeeCrudRepo;
 
