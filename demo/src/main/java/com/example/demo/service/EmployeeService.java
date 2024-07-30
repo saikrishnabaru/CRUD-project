@@ -3,6 +3,7 @@ package com.example.demo.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Employee;
@@ -38,4 +39,18 @@ public class EmployeeService implements EmployeeServiceInterface{
 		// TODO Auto-generated method stub
 		crudRepo.deleteById(empId);
 	}
+
+	@Override
+	public List<Employee> findByDepartmentOrderBySalary(String department) {
+		// TODO Auto-generated method stub
+		return crudRepo.findByDepartmentOrderBySalary(department);
+	}
+
+	@Override
+	public List<Employee> findBy(Sort by) {
+		// TODO Auto-generated method stub
+		return crudRepo.findBy(by);
+	}
+
+
 }
