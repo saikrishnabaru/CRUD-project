@@ -2,7 +2,7 @@ package com.example.demo.service;
 
 import java.util.List;
 
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.PageRequest;
 
 import com.example.demo.entity.Employee;
 
@@ -18,7 +18,7 @@ public interface EmployeeServiceInterface {
 
 	public List<Employee> findByDepartmentOrderBySalary(String department);
 
-	public List<Employee> findBy(Sort by);
+	public List<Employee> findBy(PageRequest pageRequest);
 	
 
 }
