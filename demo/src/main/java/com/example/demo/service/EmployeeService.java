@@ -3,6 +3,7 @@ package com.example.demo.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
@@ -47,10 +48,9 @@ public class EmployeeService implements EmployeeServiceInterface{
 	}
 
 	@Override
-	public List<Employee> findBy(Sort by) {
+	public List<Employee> findBy(PageRequest pageRequest) {
 		// TODO Auto-generated method stub
-		return crudRepo.findBy(by);
+		return crudRepo.findBy(pageRequest);
 	}
-
 
 }

@@ -3,7 +3,7 @@ package com.example.demo.repo;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -33,6 +33,6 @@ public interface EmployeeCrudRepo extends JpaRepository<Employee,Long>{
 	
 	List<Employee> findByDepartmentOrderBySalary(String department);
 	
-	List<Employee> findBy(Sort by);
+	List<Employee> findBy(Pageable page);
 
 }
